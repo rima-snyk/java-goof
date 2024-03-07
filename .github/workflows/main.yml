@@ -4,8 +4,8 @@ jobs:
   security:
     runs-on: ubuntu-latest
     steps:
-      - working-directory: ./todolist-goof
       - uses: actions/checkout@master
+      - working-directory: ./todolist-goof
       - name: Run Snyk to check for vulnerabilities 
         uses: snyk/actions/maven@master
         continue-on-error: true # To make sure that SARIF upload gets called
